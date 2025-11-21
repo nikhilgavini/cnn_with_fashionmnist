@@ -145,7 +145,11 @@ With:
 
 The model achieves roughly ~86% test accuracy
 
+A plot of training and test accuracy over the training epochs is shown:
+<img width="543" height="435" alt="image" src="https://github.com/user-attachments/assets/daeac886-ce5a-4ecf-8e65-d0fd6aa9c956" />
+
 This is a reasonable baseline for a small CNN on FashionMNIST. 
+
 Public benchmarks and deeper architectures can push this into the 90–92% range.
 
 ---
