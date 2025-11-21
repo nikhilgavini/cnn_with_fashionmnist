@@ -82,7 +82,7 @@ Design choices:
 - 2 convolutional layers with 3×3 kernels and max pooling for spatial downsampling.
 - Shallow architecture by design to balance model capacity and overfitting risk on a relatively small 28×28 grayscale dataset.
 - Final layer outputs 10 logits corresponding to the 10 FashionMNIST classes.
-- log_softmax in the forward pass pairs naturally with CrossEntropyLoss
+- log_softmax in the return because of increased numerical stability & simplification of cross-entropy loss function later on.
   
 ---
 
@@ -99,7 +99,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = ConvolutionalNetwork().to(device)
 ```
 
-Core Training Loop (Simplified:
+Core Training Loop (Simplified):
 ```python
 for epoch in range(epochs):
     model.train()
